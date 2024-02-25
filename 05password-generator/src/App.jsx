@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -6,7 +6,8 @@ function App() {
   const [isNum, setIsNum] = useState(true);
   const [isSym,setIsSym] =  useState(false);
   const [pass, setPass] = useState("");
-  const [copyButton, changeCopyButtonText]=useState("Copy")
+  const [copyButton, changeCopyButtonText]=useState("Copy");
+  const passRef = useRef(null)
 
   //for generate random password :
   const passMaker=()=>{
@@ -26,7 +27,9 @@ function App() {
   //for copy the password into clipboard using copy button:
  const copy=()=>{
     window.navigator.clipboard.writeText(pass).then(() => {
-      changeCopyButtonText("Copied")
+      passRef.current.select();
+      changeCopyButtonText("Copied");
+      passRef.current.select();
     }, err => {
       console.log('Error in copying',err);
     });
@@ -41,7 +44,7 @@ function App() {
       
      <div id="container" className='bg-teal-200 fixed p-12 rounded-2xl ml-60 border border-blue-600'>
       <h1 className='mb-14 text-3xl text-blue-600'>Password Generator</h1>
-      <input type="text" value={pass} readOnly placeholder='P a s s w o r d' className='rounded px-4 py-2.5 outline-none hover:bg-slate-300'/>
+      <input type="text" value={pass} ref={passRef}readOnly placeholder='P a s s w o r d' className='rounded px-4 py-2.5 outline-none hover:bg-slate-300'/>
 
       <button id='copyButton' className='mr-8 ml-0 bg-blue-500 p-2 rounded-xl text-lg hover:bg-black hover:text-cyan-300' onClick={copy}>{copyButton}</button>
 
