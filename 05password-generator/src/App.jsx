@@ -13,8 +13,8 @@ function App() {
   const passMaker=()=>{
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    if(isNum) str += "0123456789";
-    if(isSym) str+= "~!@#$%^&*()-_=+[{|]}\;:,.<>/?";
+    if(isNum) str += "012345678901234567890123456789"; // used thrice for increasing the probability  of getting a number.
+    if(isSym) str+= "~!@#$%^&*()-_=+[{|]}\;:,.<>/?~!@#$%^&*()-_=+[{|]}\;:,.<>/?"; // used twice for increasing the probability  of getting a Symbol.
 
     for(let i=1;i<=length;i++){
       let char = Math.floor(Math.random()*str.length+1);
@@ -29,7 +29,6 @@ function App() {
     window.navigator.clipboard.writeText(pass).then(() => {
       passRef.current.select();
       changeCopyButtonText("Copied");
-      passRef.current.select();
     }, err => {
       console.log('Error in copying',err);
     });
