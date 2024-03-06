@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 export default function Footer() {
     return (
-        <footer className="bg-white border-y">
-            <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <footer className="bg-gray-200 border-y sticky">
+            <div className="mx-10 w-full max-w-screen-xl lg:py-2">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <Link to="/" className="flex items-center">
+                        <Link to="" className="flex items-center">
                             <img
-                                src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                                className="mr-3 h-16"
+                                src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/43759a21936611.56309eef8940a.png"
+                                className="h-16 w-18 rounded-full"
                                 alt="Logo"
                             />
                         </Link>
@@ -17,14 +17,14 @@ export default function Footer() {
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
-                            <ul className="text-gray-500 font-medium">
+                            <ul className="font-medium text-blue-800">
                                 <li className="mb-4">
-                                    <Link to="/" className="hover:underline">
+                                    <Link to="" className="hover:underline">
                                         Home
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/about" className="hover:underline">
+                                    <Link to="about" className="hover:underline">
                                         About
                                     </Link>
                                 </li>
@@ -35,7 +35,7 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://github.com/hiteshchoudhary"
+                                        href="https://github.com/impallab"
                                         className="hover:underline"
                                         target="_blank"
                                         rel="noreferrer"
@@ -44,8 +44,8 @@ export default function Footer() {
                                     </a>
                                 </li>
                                 <li>
-                                    <Link to="/" className="hover:underline">
-                                        Discord
+                                    <Link to="https://pallab-portfolio.netlify.app/" className="hover:underline">
+                                        PortFolio
                                     </Link>
                                 </li>
                             </ul>
@@ -70,14 +70,14 @@ export default function Footer() {
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
-                        © 2023
-                        <a href="https://hiteshchoudhary.com/" className="hover:underline">
-                            hiteshchoudhary
+                        All Rights Deserved {() => new Date().getFullYear()} impAllab Inc.
+                        <a href="https://pallab-portfolio.netlify.app/" className="hover:underline">
+                            Pallab Dandapat
                         </a>
-                        . All Rights Reserved.
+                        © 2024
                     </span>
                     <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                        <Link to="#" className="text-gray-500 hover:text-gray-900">
+                        <Link to="https://www.facebook.com/" className="bg-black p-1 rounded-full text-cyan-300 border border-cyan-300 hover:text-black hover:bg-cyan-300 hover:border-black">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -93,7 +93,7 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">Facebook page</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="bg-black p-1 rounded-full text-cyan-300 border border-cyan-300 hover:text-black hover:bg-cyan-300 hover:border-black">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -105,7 +105,7 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">Discord community</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="https://twitter.com/Pallab30176388" className="bg-black p-1 rounded-full text-cyan-300 border border-cyan-300 hover:text-black hover:bg-cyan-300 hover:border-black">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -121,7 +121,7 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">Twitter page</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="https://github.com/impallab" className="bg-black p-1 rounded-full text-cyan-300 border border-cyan-300 hover:text-black hover:bg-cyan-300 hover:border-black">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -137,22 +137,19 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">GitHub account</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="https://www.linkedin.com/in/impallab/" className="bg-black p-1 rounded-full text-cyan-300 border border-cyan-300 hover:text-black hover:bg-cyan-300 hover:border-black">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor"
-                                viewBox="0 0 20 20"
+                                viewBox="0 0 24 24" // viewBox updated to match LinkedIn icon's dimensions
                             >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
-                                    clip-rule="evenodd"
-                                />
+                                <path d="M1.73 2.75h3.18v17.49h-3.18v-17.49zm20.02 4.01c-2.07 0-3.63 1.13-4.26 2.2h-.06v-1.9h-3.2v17.48h3.23v-9.16c0-.32.03-.64.11-.89.22-.64.72-1.31 1.56-1.31 1.1 0 1.55.84 1.55 2.07v9.29h3.24v-9.91c0-4.25-2.27-6.26-5.29-6.26-2.52 0-3.63 1.68-4.25 2.83h-.06v-2.45h-3.2c.05.99-.67 10.51 0 11.2h3.2v-1.58c.43-.03 1.1-.06 1.66-.06 2.42 0 3.67 1.4 3.67 4.21v6.08h3.24v-9.91c0-4.25-2.27-6.26-5.29-6.26zm-13.5 9.95v-9.95h-3.24v9.95h3.24z" />
                             </svg>
-                            <span className="sr-only">Dribbble account</span>
+                            <span className="sr-only">LinkedIn account</span>
                         </Link>
+
                     </div>
                 </div>
             </div>
