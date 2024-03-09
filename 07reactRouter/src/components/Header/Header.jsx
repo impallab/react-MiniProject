@@ -11,7 +11,7 @@ export default function Header() {
                     <Link to="/" className="flex items-center">
                         <img
                             src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/43759a21936611.56309eef8940a.png"
-                            className="h-14 rounded-full w-16 border border-red-600"
+                            className="h-14 rounded-full w-16 border border-orange-700"
                             alt="Logo"
                         />
                     </Link>
@@ -21,7 +21,7 @@ export default function Header() {
 
                         <Link
                             to="#"
-                            className="text-cyan-300 border border-cyan-300 bg-black hover:text-red-600 hover:border-red-600 focus:ring-4  font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                            className="text-cyan-300 border border-cyan-300 bg-black hover:text-orange-700 hover:border-orange-700 focus:ring-4  font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                         >
                             Log in
                         </Link>
@@ -30,7 +30,7 @@ export default function Header() {
 
                         <Link
                             to="#"
-                            className="text-cyan-300 border border-cyan-300 bg-black hover:text-red-600 hover:border-red-600 focus:ring-4  font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                            className="text-cyan-300 border border-cyan-300 bg-black hover:text-orange-700 hover:border-orange-700 focus:ring-4  font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                         >
                             Get started
                         </Link>
@@ -43,7 +43,7 @@ export default function Header() {
                             <li>
                                 <NavLink to="/"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "thover:text-red-600" : "text-cyan-300"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-white bg-slate-900 rounded-full lg:p-2" : "text-cyan-300"}  lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
                                     Home
@@ -53,7 +53,7 @@ export default function Header() {
                             <li>
                                 <NavLink to="/about"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "thover:text-red-600" : "text-cyan-300"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-red-600 lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-white bg-slate-900 rounded-full lg:p-2" : "text-cyan-300"}  lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
                                     About
@@ -63,7 +63,7 @@ export default function Header() {
                             <li>
                                 <NavLink to="/contact"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "thover:text-red-600" : "text-cyan-300"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-white bg-slate-900 rounded-full lg:p-2" : "text-cyan-300"}  lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
                                     Contact
@@ -72,7 +72,7 @@ export default function Header() {
                             <li>
                                 <NavLink to="/github"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "thover:text-red-600" : "text-cyan-300"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-white bg-slate-900 rounded-full lg:p-2" : "text-cyan-300"}  lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
                                     Github
